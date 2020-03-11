@@ -27,25 +27,25 @@ class LandingPage extends StatelessWidget {
             Image.asset('img1.png'),
             Positioned(
               bottom: 150,
-              child: Material(
+              child: MaterialButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
                 color: Color(0xffff5f30),
-                borderRadius: BorderRadius.circular(30),
-                child: MaterialButton(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 40,
-                    vertical: 10,
-                  ),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SignInPage()));
-                  },
-                  child: Text(
-                    'Sign In',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 10,
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignInPage()));
+                },
+                child: Text(
+                  'Sign In',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
                   ),
                 ),
               ),
@@ -102,19 +102,23 @@ class SignInPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Material(
+            MaterialButton(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
               color: Color(0xffff5f30),
-              borderRadius: BorderRadius.circular(30),
-              child: MaterialButton(
-                minWidth: MediaQuery.of(context).size.width - 60,
-                onPressed: () {},
-                child: Text(
-                  'Sign In',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
+              padding: EdgeInsets.symmetric(
+                horizontal: 40,
+                vertical: 10,
+              ),
+              minWidth: MediaQuery.of(context).size.width - 60,
+              onPressed: () {},
+              child: Text(
+                'Sign In',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
                 ),
               ),
             ),
